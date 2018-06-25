@@ -14,7 +14,6 @@ function event_say(e)
 					e.self:Say("Yes, potamides. Water nymphs. They guard the river. Legend has it that long ago the Unkempt asked their queen to prevent intruders from crossing the river and entering the Unkempt Woods. The Queen agreed and now to this day everyone that gets close to the river is seldom heard from again. Why don't you go take a look already and leave me alone!?")
 				elseif(e.message:findi("seed rituals")) and qglobals["DruPQ"] == "1" then
 					e.self:Say("If you can find the text for the ritual, I'll help you with it.  Bring it to me and I think we can make it work.  It's unlikely that any such text exists, though, so don't get your hopes up.")
-			end
 		end
 	end
 end
