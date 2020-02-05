@@ -1,7 +1,15 @@
 sub EVENT_SAY {
   if ($text=~/way/i) {
-    quest::say("I do miss me time with Muada and I suppose I'll get me chance again. I'll have to leave ye now and go to Muada so that I may learn what I must do for him to end the threat to our ways as beastlords. Be well and ready to open your mind to learn from Muada.");
-    quest::summonitem(57008); # Item: Letter from Muada
+    if ($class eq "Beastlord") {
+        #:: Set after letter tunred in
+        if ($client->GetGlobal("beast_epic") == 2) {
+            quest::say("I do miss me time with Muada and I suppose I'll get me chance again. I'll have to leave ye now and go to Muada so that I may learn what I must do for him to end the threat to our ways as beastlords. Be well and ready to open your mind to learn from Muada.");
+                #:: Give a 57008 - Letter from Muada
+                quest::summonitem(57008);
+            }
+            #:: Else no response
+    }
+    #:: Else no response
   }
   if ($client->GetGlobal("beast_epic") ==9) {
   if ($text=~/hail/i) {
